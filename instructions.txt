@@ -1,0 +1,22 @@
+0. Node ID Extraction: Run node_id_extraction.py to extract all relevant node ids per image. Saved into txt files (or node_id_extraction_intersections.py for intersections only).
+
+1. Data Annotation: Run gt_mask_annotate.py to extract segmentation masks for satellite images based on OSM data
+
+2. Dataset Creation: Run the following to extract image patches for both satellite and mask .tif files:
+    . build_dataset.sh
+(You will likely run this twice for both the satellite image directory and the mask directory)
+
+3. Organize Dataset: Run data_organize.py to format the data as the following:
+    - dataset_dir
+        - nodeid_dir
+            - nodeid_mask.png 
+            - nodeid_sat.jpg
+
+4. Dataset Split: Run split_dataset.py to split the dataset_dir into training, testing, and validation samples. 
+You will now have a new directory in the following format:
+    - dataset_dir
+        - train_dir
+        - test_dir
+        - val_dir
+
+5. Training the Transformer: Run sseg_transformer.py to begin the training and evaluation process of the model.

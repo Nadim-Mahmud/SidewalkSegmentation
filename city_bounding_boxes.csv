@@ -1,0 +1,2 @@
+city,bounding_box
+Manhattan,"{'filterType': 'mbr', 'lowerLeft': {'latitude': np.float64(40.679654), 'longitude': np.float64(-74.047207)}, 'upperRight': {'latitude': np.float64(40.882012), 'longitude': np.float64(-73.906769)}}"

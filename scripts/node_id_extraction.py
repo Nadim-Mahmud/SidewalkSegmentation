@@ -4,16 +4,18 @@ import geopandas as gpd
 from shapely.geometry import box
 import osmnx as ox
 import rasterio
+from tqdm import tqdm
 
 # Directory containing GeoTIFF files
-input_dir = "/home/hanew/your_project_folder/omniacc/data/tifs/manhattan/images"
-output_dir = "/home/hanew/your_project_folder/omniacc/data/tifs/manhattan/node/ids"
+input_dir = "../data/manhattan/images"
+output_dir = "../data/manhattan/node/ids"
 os.makedirs(output_dir, exist_ok=True)
 
 SIDEWALK_FILTER = '["highway"~"footway|path|pedestrian|steps"]["foot"!="no"]'
 
 # Process each GeoTIFF file in the directory
-for tif_file in Path(input_dir).glob("*.tif"):
+tif_files = list(Path(input_dir).glob("*.tif"))
+for tif_file in tqdm(tif_files, desc="Extracting node ids"):
     print(f"Extracting node ids for {tif_file.name}")
     with rasterio.open(tif_file) as src:
         crs = src.crs

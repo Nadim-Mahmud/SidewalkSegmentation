@@ -1,0 +1,17 @@
+Accessible navigation for wheelchair users remains a
+significant challenge due to obstacles such as uneven sidewalks,
+steep inclines, and the lack of access ramps. Existing routing
+systems primarily focus on minimizing travel time or distance,
+often failing to consider mobility constraints. This paper presents
+MyPath, an end-to-end accessible navigation system that inte-
+grates user-reported data, machine learning, and programmatic
+analysis to optimize routing for wheelchair users. Additionally,
+MyPath provides detailed, step-by-step navigation instructions.
+By unifying these elements within a mobile application, My-
+Path provides a real-time, personalized, and scalable solution
+for accessible routing. Our contributions include (1) a novel
+hybrid routing framework integrating real-world feedback and
+algorithmic approach, (2) automated detection of environmental
+barriers, and (3) Step by step detailed navigation. The proposed
+system has broad implications for urban accessibility, smart
+mobility, and inclusive navigation solutions
